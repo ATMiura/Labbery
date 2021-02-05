@@ -1,6 +1,6 @@
 export default class SvgUse {
     constructor() {
-        this.init();
+        //this.init();
     }
     init() {
         ( function( window, document )

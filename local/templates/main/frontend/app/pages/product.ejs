@@ -1,0 +1,14 @@
+<% const data = {
+    'title': 'КЛУБНИЧНАЯ МЕЧТА М В ШОКОЛАДЕ',
+} %>
+<%- require("../layouts/header.ejs")(data) %>
+
+    <%- require("../components/elements/product-single.ejs")() %>
+
+    <%- require("../components/elements/product-advantages.ejs")() %>
+
+    <%- require("../components/elements/product-info-delivery.ejs")() %>
+
+    <%- require("../components/elements/section--info.ejs")() %>
+
+<%- require("../layouts/footer.ejs")() %>

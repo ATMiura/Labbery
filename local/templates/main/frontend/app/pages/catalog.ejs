@@ -1,0 +1,18 @@
+<% const data = {
+    'title': 'Каталог',
+} %>
+<%- require("../layouts/header.ejs")(data) %>
+
+    <% if(data.title=='Каталог') { %>
+
+        <%- require("../components/elements/page-title.ejs")(data) %>
+
+        <%- require("../components/elements/catalog-filter.ejs")() %>
+
+    <% } %>
+
+    <%- require("../components/elements/catalog-product.ejs")() %>
+
+    <%- require("../components/elements/section--info.ejs")() %>
+
+<%- require("../layouts/footer.ejs")() %>

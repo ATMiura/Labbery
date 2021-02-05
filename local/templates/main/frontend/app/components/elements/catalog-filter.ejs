@@ -1,0 +1,48 @@
+<section class="section section--filter">
+    <div class="container">
+        <div class="filter">
+            <div class="filter--wrapper">
+                <div class="filter--inner filter--inner_desktop">
+                    <div class="filter--item"><a href="/catalog" class="link nuxt-link-exact-active nuxt-link-active">Все категории</a></div>
+                    <div class="filter--item"><a href="/catalog/klubnichnie-bukety" class="link">Клубничные букеты</a></div>
+                    <div class="filter--item"><a href="/catalog/klubnichnie-boksi" class="link">Клубничные боксы</a></div>
+                    <div class="filter--item"><a href="/catalog/kombo-nabori" class="link">Комбо-наборы</a></div>
+                    <div class="filter--item"><a href="/catalog/lyneika-classic" class="link">Линейка "Classic"</a></div>
+                    <div class="filter--item"><span class="filter--item-show-more link">Показать еще<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter--item-show-more-icon"><path d="M1 1L7.74074 8L14 1" stroke="#333333"></path></svg></span></div>
+                </div>
+                <div class="filter--inner filter--inner_accordeon" style="display:none;">
+                    <div class="filter--item"><a href="/catalog/tsvetochnie-buketi" class="link">Цветочные букеты</a></div>
+                    <div class="filter--item"><a href="/catalog/classic" class="link">"Classic"</a></div>
+                    <div class="filter--item"><a href="/catalog/muzhskye-buketi" class="link">Мужские букеты</a></div>
+                </div>
+                <div class="filter--inner filter--inner_mobile">
+                    <div class="filter--item"><a href="/catalog" class="link nuxt-link-exact-active nuxt-link-active">Все категории</a></div>
+                    <div class="filter--item"><a href="/catalog/klubnychnie-buketi" class="link">Клубничные букеты</a></div>
+                    <div class="filter--item"><a href="/catalog/klubnychnie-boksi" class="link">Клубничные боксы</a></div>
+                    <div class="filter--item"><a href="/catalog/tsvetochnie-buketi" class="link">Цветочные букеты</a></div>
+                    <div class="filter--item"><a href="/catalog/classic" class="link">"Classic"</a></div>
+                    <div class="filter--item"><a href="/catalog/muzhskye-buketi" class="link">Мужские букеты</a></div>
+                </div>
+                <div class="filter--delimetr" style="display:;"></div>
+                <div class="filter--inner filter--inner_sorting" style="display:;">
+                    <div class="filter--item">Сортировать:</div>
+                    <div class="filter--item">
+                        <div class="link link-active">По новинкам</div>
+                    </div>
+                    <div class="filter--item">
+                        <div class="link">Цена по возрастанию</div>
+                    </div>
+                    <div class="filter--item">
+                        <div class="link">Цена по убыванию</div>
+                    </div>
+                    <div class="filter--item filter--range">
+                        <div>Фильтр по цене:</div>
+                        <div class="input--range">
+                            <vue-slider max="10000" interval="500"></vue-slider>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

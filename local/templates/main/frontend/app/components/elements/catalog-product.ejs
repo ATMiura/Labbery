@@ -1,0 +1,9 @@
+<section class="section section--catalog">
+    <div class="container">
+        <div class="grid grid--products grid--xl-4 grid--md-2 grid--sm-2">
+            <% for(var i=0; i<4; i++) { %>
+                <%- require("./ItemProduct.ejs")() %>
+            <% } %>
+        </div>
+    </div>
+</section>

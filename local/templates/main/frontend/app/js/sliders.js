@@ -1,42 +1,10 @@
-import { Swiper, Navigation, Pagination } from 'swiper/dist/js/swiper.esm.js'
-import 'swiper/dist/css/swiper.min.css'
+import { Swiper, Navigation, Pagination } from 'swiper/dist/js/swiper.esm.js';
+import 'swiper/dist/css/swiper.min.css';
 
 Swiper.use([Navigation, Pagination]);
 
 export default class Sliders {
     constructor() {
-        this.sliderHit = [
-            {
-                'selector': '#sliderHit .swiper-container',
-                'options': {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                    slidesPerGroup: 4,
-                    speed: 700,
-                    loop: true,
-                    pagination: {
-                        el: '#sliderHit .swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '#sliderHit .swiper-button-next',
-                        prevEl: '#sliderHit .swiper-button-prev',
-                    },
-                    breakpoints: {
-                        800: {
-                            slidesPerView: 2,
-                            slidesPerGroup: 2,
-                            spaceBetween: 15
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                            slidesPerGroup: 3,
-                            spaceBetween: 20
-                        },
-                    }
-                }
-            }
-        ];
 
         this.SliderPopular = [
             {
@@ -111,34 +79,58 @@ export default class Sliders {
             }
         ];
 
+        this.SliderProductPage = [
+            {
+                'selector': '#SliderProductPage .swiper-container',
+                'options': {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    grabCursor: true,
+                    pagination: {
+                        el: "#SliderProductPage .swiper-pagination",
+                        clickable: true
+                    }
+                }
+            }
+        ];
+
         this.init();
+        this.events();
     }
 
     init() {
-        this.sliderHit.forEach(function (slider) {
-            if ($(slider.selector).find($('.swiper-slide')).length > 4) {
-                new Slider(slider.selector, slider.options)
-            } else {
-                $(slider.selector).closest('.slider-catalog').find('.slider-catalog__head').addClass('slider-catalog__head--nav-hide');
-            }
-        });
 
         this.SliderPopular.forEach(function (slider) {
-            new Slider(slider.selector, slider.options)
-            /*if ($(slider.selector).find($('.swiper-slide')).length > 4) {
-                new Slider(slider.selector, slider.options)
-            } else {
-                $(slider.selector).closest('.slider-catalog').find('.slider-catalog__head').addClass('slider-catalog__head--nav-hide');
-            }*/
+            new Slider(slider.selector, slider.options);
         });
 
         this.SliderPluses.forEach(function (slider) {
-            new Slider(slider.selector, slider.options)
-            /*if ($(slider.selector).find($('.swiper-slide')).length > 4) {
-                new Slider(slider.selector, slider.options)
-            } else {
-                $(slider.selector).closest('.slider-catalog').find('.slider-catalog__head').addClass('slider-catalog__head--nav-hide');
-            }*/
+            new Slider(slider.selector, slider.options);
+        });
+
+        this.SliderProductPage.forEach(function (slider) {
+            new Slider(slider.selector, slider.options);
+        });
+    }
+
+    nextSlide($this){
+        let $thumb = $this;
+
+        let swiperSlider = new Swiper('#SliderProductPage .swiper-container');
+        let slideNumber = $thumb.data("image-number");
+
+        swiperSlider.slideTo(slideNumber, 1000, false);
+
+        $('.product-thumbs--item').removeClass('product-thumbs--item_active');
+        $thumb.parents('.product-thumbs--item').addClass('product-thumbs--item_active');
+    }
+
+    events() {
+        let self = this;
+
+        $(document).on('click', '.product-gallery--thumb', function (e){
+            e.preventDefault();
+            self.nextSlide($(this));
         });
     }
 }

@@ -25,7 +25,7 @@ import SvgUse from'./js/svgUse'
 import Forms from'./js/forms/forms'
 import Modals from'./js/modals'
 import MapObject from'./js/map-object'
-import Sliders from'./js/sliders'
+
 import Search from'./js/search'
 import Debounce from'./js/debounce'
 // import MapObject from'./js/map'
@@ -35,6 +35,7 @@ import Debounce from'./js/debounce'
 // import Media from './js/media'
 
 /* Labbery */
+import Sliders from'./js/sliders'
 import Aos from "./js/utils/aos";
 
 // Load styles
@@ -61,15 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if('ontouchstart' in window || navigator.maxTouchPoints) $(document.body).addClass("touch");
 
-    App.Debounce = new Debounce();
-    App.Utils = new Utils();
-    App.SvgUse = new SvgUse();
-    App.Forms = new Forms();
-    App.Modals = new Modals();
-    App.MapObject = new MapObject();
-    App.Sliders = new Sliders();
-    App.Search = new Search();
-    App.Debounce = new Debounce();
+    //App.Debounce = new Debounce();
+    //App.Utils = new Utils();
+    //App.SvgUse = new SvgUse();
+    //App.Forms = new Forms();
+    //App.Modals = new Modals();
+    //App.MapObject = new MapObject();
+
+    //App.Search = new Search();
+    //App.Debounce = new Debounce();
     // App.Map = new Map();
     // App.Video = new Video();
     // App.Scrollbar = new Scrollbar();
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     /* Labbery */
+    App.Sliders = new Sliders();
     App.Aos = new Aos();
 
     $('[data-inputmask]').each(function () {
