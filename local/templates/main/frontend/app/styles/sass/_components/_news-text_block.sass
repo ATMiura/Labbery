@@ -1,0 +1,50 @@
+.text-block
+	margin-bottom: 45px
+	width: 600px
+	@media screen and (max-width: 768px) 
+		font-size: 16px
+		margin-bottom: 20px
+		width: 100%
+
+.text-block__title
+	font-style: normal
+	font-weight: 500
+	font-size: 24px
+	line-height: 30px
+	color: #323232
+	margin-bottom: 20px
+	@media screen and (max-width: 768px) 
+		font-size: 22px
+		margin-bottom: 15px
+
+.text-block__description
+	font-style: normal
+	font-weight: 300
+	font-size: 18px
+	line-height: 120%
+	letter-spacing: 0.03em
+	color: #4E4E4E
+	@media screen and (max-width: 768px) 
+		font-size: 16px
+
+.images-block
+	display: flex
+	justify-content: center
+	gap: 20px
+	margin-bottom: 25px
+
+.images-block .item--image
+	width: auto
+
+.images-block .item--image img
+	width: 287px
+	height: 377px
+	object-fit: cover
+		overflow: hidden
+	@media screen and (max-width: 768px) 
+		width: 200px
+		height: 260px
+	@media screen and (max-width: 477px) 
+		width: 150px
+		height: 195px
+		background-size: 100%

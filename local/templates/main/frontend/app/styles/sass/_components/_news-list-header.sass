@@ -1,0 +1,130 @@
+.news-list-header
+	margin-right: auto
+	margin-left: auto
+	width: 100%
+	text-align: center
+	margin-bottom: 40px
+	margin-top: 140px
+
+.news-list-header__title 
+	font-style: normal
+	font-weight: 300
+	font-size: 36px
+	line-height: 45px
+	text-align: center
+	letter-spacing: 0.03em
+	text-transform: uppercase
+	margin-bottom: 35px
+
+.news-list-header__navigation
+	display: flex
+	justify-content: center
+	list-style-type: none
+	gap: 42px
+	font-weight: normal
+	font-size: 16px
+	line-height: 100%
+	padding-left: 0
+	@media screen and (max-width: 768px)
+		gap: 12px
+
+a:hover
+	opacity: 0.6
+
+a:active
+	opacity: 0.3
+
+.news-list-header__link
+	color: #818181
+ 
+.active
+	color: #4E4E4E
+
+.news__list
+	display: grid
+	grid-gap: 45px
+	width: 100%
+	padding-bottom: 100px
+	@media screen and (max-width: 768px)
+		grid-gap: 25px
+
+.news-card
+	display: flex
+	flex-direction: column
+	width: 100%
+
+.news-card .item--image
+	cursor: pointer
+
+.news-card .item--image:hover
+	opacity: 0.6
+
+.news-card .item--image:active
+	opacity: 0.3
+
+.news-card__date
+	margin-top: 15px
+	background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.167 2.49992H17.5003C17.7213 2.49992 17.9333 2.58772 18.0896 2.744C18.2459 2.90028 18.3337 3.11224 18.3337 3.33325V16.6666C18.3337 16.8876 18.2459 17.0996 18.0896 17.2558C17.9333 17.4121 17.7213 17.4999 17.5003 17.4999H2.50033C2.27931 17.4999 2.06735 17.4121 1.91107 17.2558C1.75479 17.0996 1.66699 16.8876 1.66699 16.6666V3.33325C1.66699 3.11224 1.75479 2.90028 1.91107 2.744C2.06735 2.58772 2.27931 2.49992 2.50033 2.49992H5.83366V0.833252H7.50033V2.49992H12.5003V0.833252H14.167V2.49992ZM16.667 9.16658H3.33366V15.8333H16.667V9.16658ZM12.5003 4.16659H7.50033V5.83325H5.83366V4.16659H3.33366V7.49992H16.667V4.16659H14.167V5.83325H12.5003V4.16659ZM5.00033 10.8333H6.66699V12.4999H5.00033V10.8333ZM9.16699 10.8333H10.8337V12.4999H9.16699V10.8333ZM13.3337 10.8333H15.0003V12.4999H13.3337V10.8333Z' fill='%23D8D8D8'/%3E%3C/svg%3E%0A") no-repeat
+	backgroind-size: 20px 20px
+	padding-left: 35px
+	padding-top: 2px
+	height: 20px
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 100%
+	letter-spacing: 0.03em
+	color: #818181
+	@media screen and (max-width: 768px)
+		margin-top: 10px
+		backgroind-size: 18px 18px
+
+.news-card__title
+	margin-top: 15px
+	font-style: normal
+	font-weight: 500
+	font-size: 24px
+	line-height: 30px
+	color: #323232
+	margin-bottom: 10px
+	cursor: pointer
+
+.news-card__title:hover
+	opacity: 0.6
+
+.news-card__title:active
+	opacity: 0.3
+
+.news-card__description
+	font-style: normal
+	font-weight: 300
+	font-size: 16px
+	line-height: 130%
+	letter-spacing: 0.03em
+	color: #818181
+
+.news-card__description a
+	color: #D7607F
+
+.tags-block 
+	display: flex
+	gap: 5px
+
+.tags-block__item
+	border: 1px solid #D8D8D8
+	padding: 8px 12px
+	font-style: normal
+	font-weight: normal
+	font-size: 12px
+	line-height: 15px
+	text-align: right
+	letter-spacing: 0.03em
+	text-transform: uppercase
+	color: #818181
+	cursor: pointer
+
+.tags-block__item:hover
+	opacity: 0.6
+
+.tags-block__item:active
+	opacity: 0.3

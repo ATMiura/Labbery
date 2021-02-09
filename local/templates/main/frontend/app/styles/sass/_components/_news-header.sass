@@ -1,0 +1,101 @@
+.article-header
+	display: flex
+	justify-content: space-between
+	max-width: 1272px
+	margin-left: auto
+	margin-right: auto
+	column-gap: 20px
+	@media screen and (max-width: 768px)
+		margin-bottom: 30px
+		flex-wrap: wrap
+
+
+	.article-header__block:nth-child(1)
+		flex: 1
+		@media screen and (max-width: 768px)
+			order: 1
+			flex: none
+
+	.article-header__block:nth-child(2)
+		flex: 10
+		@media screen and (max-width: 768px)
+			order: 3
+			flex: 0 1 100%
+
+
+	.article-header__block:nth-child(3)
+		flex: 1
+		@media screen and (max-width: 768px)
+			order: 2
+			flex: none
+	
+	.article-header__button
+		width: 155px
+		height: 52px
+		outline: none
+		background-color: transparent
+		border: none
+		background: url("data:image/svg+xml,%3Csvg width='144' height='52' viewBox='0 0 144 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.647896 26L21.6615 0.5H143.5V51.5H21.6615L0.647896 26Z' stroke='%23D7607F'/%3E%3C/svg%3E%0A") no-repeat
+		color: #D7607F
+		margin-top: 7px
+		font-weight: normal
+		font-size: 12px
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		@media screen and (max-width: 937px) 
+			margin-bottom: 20px
+		@media screen and (max-width: 768px) 
+			width: 100px
+			height: 42px
+			background-size: 100%
+			font-size: 10px
+			padding-left: 20px
+			padding-bottom: 5px
+
+	.article-header__button:hover
+		opacity: 0.6
+	
+	.article-header__button:active
+		opacity: 0.4
+
+	.article-header__title
+		font-family: $default-font!important
+		font-weight: 300
+		font-size: 36px
+		text-align: center
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		color: #818181
+		margin-top: 0px
+		margin-bottom: 35px
+		@media screen and (max-width: 1458px) 
+			font-size: 30px
+		@media screen and (max-width: 937px) 
+			text-align: center
+			margin-bottom: 0px
+		@media screen and (max-width: 768px) 
+			font-size: 26px
+
+	.article-header__date
+		margin-top: 15px
+		background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.167 2.49992H17.5003C17.7213 2.49992 17.9333 2.58772 18.0896 2.744C18.2459 2.90028 18.3337 3.11224 18.3337 3.33325V16.6666C18.3337 16.8876 18.2459 17.0996 18.0896 17.2558C17.9333 17.4121 17.7213 17.4999 17.5003 17.4999H2.50033C2.27931 17.4999 2.06735 17.4121 1.91107 17.2558C1.75479 17.0996 1.66699 16.8876 1.66699 16.6666V3.33325C1.66699 3.11224 1.75479 2.90028 1.91107 2.744C2.06735 2.58772 2.27931 2.49992 2.50033 2.49992H5.83366V0.833252H7.50033V2.49992H12.5003V0.833252H14.167V2.49992ZM16.667 9.16658H3.33366V15.8333H16.667V9.16658ZM12.5003 4.16659H7.50033V5.83325H5.83366V4.16659H3.33366V7.49992H16.667V4.16659H14.167V5.83325H12.5003V4.16659ZM5.00033 10.8333H6.66699V12.4999H5.00033V10.8333ZM9.16699 10.8333H10.8337V12.4999H9.16699V10.8333ZM13.3337 10.8333H15.0003V12.4999H13.3337V10.8333Z' fill='%23D8D8D8'/%3E%3C/svg%3E%0A") no-repeat
+		backgroind-size: 20px 20px
+		padding-left: 35px
+		padding-top: 2px
+		height: 20px
+		@media screen and (max-width: 768px) 
+			margin-top: 10px
+			backgroind-size: 18px 18px
+
+
+	.article-header__date-value
+		font-weight: normal
+		font-size: 16px
+		line-height: 100%
+		letter-spacing: 0.03em
+		color: #818181
+		width: 90px
+		@media screen and (max-width: 768px) 
+			font-size: 14px
+
+ 

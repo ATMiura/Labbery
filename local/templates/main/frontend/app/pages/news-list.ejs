@@ -1,0 +1,51 @@
+<% const data = {
+    'title': 'Новости',
+    'flowContainerClass' : 'flow-container--main'
+} %>
+
+<%- require("../layouts/header.ejs")(data) %>
+    <main>
+        <div class="container">
+            <section class="news-list-header">
+                <h2 class="news-list-header__title">Новости</h2>
+                <ul class="news-list-header__navigation">
+                    <li><a class="news-list-header__link active" href="#">Все новости</a></li>
+                    <li><a class="news-list-header__link" href="#">Лайфхаки</a></li>
+                    <li><a class="news-list-header__link" href="#">Видео</a></li>
+                    <li><a class="news-list-header__link" href="#">Статьи</a></li>
+                </ul>
+            </section>
+            <section class="news__list grid--xl-3 grid--md-2 grid--sm-1">
+                <% const list = [
+                    {}, {}, {}, {}, {}, {}
+                ] %>
+
+                <% list.forEach(function (item) { %>
+                    <div class="news-card">
+                        <div class="item--image">
+                            <img src="../../../images/content/news-image1.png" alt="Искусственный свадебный букет невесты - альтернатива живым цветам">
+                        </div>
+                        <div class="news-card__data-block">
+                            <p class="news-card__data-text">27.03.2018</p>
+                        </div>
+                        <h3 class="news-card__title">
+                            Искусственный свадебный букет невесты - альтернатива живым цветам
+                        </h3>
+                        <p class="news-card__description">
+                            Букет как искусство. Роскошные презенты. Креативные варианты букета. Правила преподнесения презента...
+                            <a href="#">Читать далее</a>
+                        </p>
+                        <div class="tags-block">
+                            <div class="tags-block__item">
+                                Новинка
+                            </div>
+                            <div class="tags-block__item">
+                                Советы
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </section>
+        </div>
+    </main>
+<%- require("../layouts/footer.ejs")() %>
